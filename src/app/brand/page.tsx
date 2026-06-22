@@ -46,7 +46,7 @@ const StaggeredText = ({ text, className }: { text: string; className?: string }
     }),
   };
 
-  const child = {
+  const child: import("framer-motion").Variants = {
     visible: {
       opacity: 1,
       y: 0,
