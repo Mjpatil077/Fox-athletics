@@ -7,6 +7,7 @@ interface ProductInteractiveViewerProps {
   colorHex?: string;
   isLimited?: boolean;
   stockLeft?: number;
+  zoomScale?: number;
 }
 
 export default function ProductInteractiveViewer({
@@ -14,6 +15,7 @@ export default function ProductInteractiveViewer({
   colorHex,
   isLimited,
   stockLeft,
+  zoomScale,
 }: ProductInteractiveViewerProps) {
   return (
     <div
