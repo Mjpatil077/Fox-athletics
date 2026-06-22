@@ -1,0 +1,101 @@
+Created At: 2026-06-15T08:24:10Z
+Completed At: 2026-06-15T08:24:10Z
+File Path: `file:///c:/Users/MAYUR/Desktop/Fox/src/app/page.tsx`
+Total Lines: 941
+Total Bytes: 46413
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: "use client";
+2:  
+3: import React, { useState, useEffect, useRef } from "react";
+4: import { useStore } from "@/context/StoreContext";
+5: import { products, Product } from "@/data/products";
+6: import Navbar from "@/components/Navbar";
+7: import CartDrawer from "@/components/CartDrawer";
+8: import QuickViewModal from "@/components/QuickViewModal";
+9: import Fox3DModel from "@/components/Fox3DModel";
+10: import {
+11:   Heart,
+12:   ShoppingBag,
+13:   Eye,
+14:   Star,
+15:   ArrowRight,
+16:   ArrowLeft,
+17:   Clock,
+18:   Flame,
+19:   CheckCircle2,
+20:   Cpu,
+21:   Zap,
+22:   Sparkles,
+23:   Layers,
+24:   Volume2,
+25:   VolumeX,
+26: } from "lucide-react";
+27: import {
+28:   motion,
+29:   AnimatePresence,
+30:   useInView,
+31:   useScroll,
+32:   useTransform,
+33: } from "framer-motion";
+34: import Link from "next/link";
+35:  
+36: /* ─── Reviews data ─── */
+37: const reviews = [
+38:   {
+39:     name: "Marcus V.",
+40:     role: "Marathon Runner",
+41:     text: "THE PHANTOM ALPHA HAS COMPLETELY CHANGED MY RACE DAYS. THAT CARBON PROPULSIVE SNAP IS UNREAL — SHAVED 45 SECONDS OFF MY PB.",
+42:     rating: 5,
+43:     verified: true,
+44:   },
+45:   {
+46:     name: "Elena S.",
+47:     role: "Athletic Trainer",
+48:     text: "FOX STRIKES THE PERFECT BALANCE BETWEEN RAW PERFORMANCE AND EDITORIAL DESIGN. THE STRIKE CLEAT TRACTION IS ABSOLUTELY LETHAL.",
+49:     rating: 5,
+50:     verified: true,
+51:   },
+52:   {
+53:     name: "Devon K.",
+54:     role: "Sneaker Architect",
+55:     text: "THE EXPOSED AUTOCLAVE CARBON FIBER AND VOLT ACCENTS FEEL MORE LIKE HYPERCAR ENGINEERING THAN ATHLETIC 
+<truncated 39854 bytes>
+n>
+765:                         <span className="font-mono text-[9px] text-white/50 mt-2 uppercase tracking-widest">{unit.label}</span>
+766:                       </div>
+767:                     </React.Fragment>
+768:                   ))}
+769:                 </div>
+770:  
+771:                 <button
+772:                   onClick={() => {
+773:                     const carbonProduct = products.find(p => p.id === "carbon-drop");
+774:                     if (carbonProduct) {
+775:                       addToCart(carbonProduct, "9");
+776:                     }
+777:                   }}
+778:                   className="w-full bg-white text-black font-bebas py-4 tracking-[0.2em] text-sm font-bold text-center transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 cursor-pointer"
+779:                 >
+780:                   <Clock size={14} /> SECURE ALLOCATION
+781:                 </button>
+782:               </div>
+783:             </div>
+784:           </RevealSection>
+785:         </div>
+786:       </section>
+787:  
+788:       {/* ═══ CHAPTER 06: COMMUNITY ═══ */}
+789:       <section className="bg-black py-32 relative overflow-hidden">
+790:         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+791:           
+792:           <RevealSection className="text-center max-w-xl mx-auto mb-20 space-y-3">
+793:             <span className="text-white/50 font-mono text-[9px] tracking-[0.3em] font-semibold block uppercase">
+794:               // CHAPTER 06: ATHLETE COLLECTIVE
+795:             </span>
+796:             <h2 className="font-bebas text-5xl md:text-8xl tracking-wide uppercase font-black text-white">
+797:               THE COLLECTIVE.
+798:             </h2>
+799:           </RevealSection>
+800:  
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
