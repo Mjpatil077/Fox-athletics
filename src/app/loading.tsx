@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 bg-neutral-950 z-[9999] flex flex-col items-center justify-center">
+    <div className="fixed inset-0 bg-neutral-950/80 backdrop-blur-md z-[9998] flex flex-col items-center justify-center">
       <div className="flex flex-col items-center gap-8">
         
         {/* Sleek Minimalist Ring Spinner */}

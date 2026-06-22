@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Space_Grotesk } from "next/font/google";
 import { StoreProvider } from "@/context/StoreContext";
 import NextTopLoader from "nextjs-toploader";
+import InitialLoader from "@/components/InitialLoader";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -35,6 +36,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-black text-white selection:bg-white selection:text-black">
         <NextTopLoader color="#ff5e00" height={3} showSpinner={true} />
+        <InitialLoader />
         <StoreProvider>
           {children}
         </StoreProvider>
