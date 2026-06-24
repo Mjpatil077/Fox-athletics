@@ -123,7 +123,7 @@ export default function InnovationPage() {
   const opacityHero = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <div className="min-h-screen bg-neutral-950 grain text-white selection:bg-bright-orange selection:text-white">
+    <div className="min-h-screen bg-black grain text-white selection:bg-bright-orange selection:text-white">
       <Navbar />
       <CartDrawer />
 
@@ -147,7 +147,7 @@ export default function InnovationPage() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="font-mono text-[10px] tracking-[0.4em] text-bright-orange uppercase"
+                  className="font-mono text-xs tracking-[0.4em] text-bright-orange uppercase"
                 >
                   Fox R&D Lab
                 </motion.p>
@@ -169,7 +169,7 @@ export default function InnovationPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
-                className="text-white/60 font-montserrat text-sm leading-relaxed max-w-md mb-10"
+                className="text-white/60 font-montserrat text-lg leading-relaxed max-w-md mb-10"
               >
                 Welcome to the edge of athletic performance. Our innovation lab is where materials science meets biomechanics, resulting in gear that rewrites the rules of what's possible.
               </motion.p>
@@ -178,7 +178,7 @@ export default function InnovationPage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
                 onClick={() => document.getElementById("technologies")?.scrollIntoView({ behavior: "smooth" })}
-                className="group relative border border-white/20 text-white font-mono text-xs tracking-[0.2em] uppercase px-8 py-4 hover:border-bright-orange hover:text-bright-orange transition-colors duration-300 overflow-hidden"
+                className="group relative border border-white/20 text-white font-mono text-sm tracking-[0.2em] uppercase px-8 py-4 hover:border-bright-orange hover:text-bright-orange transition-colors duration-300 overflow-hidden"
               >
                 <span className="relative z-10">Explore Tech Stack</span>
                 <div className="absolute inset-0 bg-bright-orange/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
@@ -221,7 +221,7 @@ export default function InnovationPage() {
                   style={{ transform: "translateZ(80px)" }}
                 >
                   <div className="w-1.5 h-1.5 bg-bright-orange rounded-full animate-ping" />
-                  <div className="font-mono text-[8px] tracking-[0.2em] uppercase text-white/70 bg-black/50 backdrop-blur border border-white/10 px-3 py-1.5">
+                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-white/70 bg-black/50 backdrop-blur border border-white/10 px-3 py-1.5">
                     AeroKnit Mesh Matrix
                   </div>
                 </motion.div>
@@ -233,7 +233,7 @@ export default function InnovationPage() {
                   className="absolute bottom-[30%] -right-10 z-20 flex items-center gap-2"
                   style={{ transform: "translateZ(100px)" }}
                 >
-                  <div className="font-mono text-[8px] tracking-[0.2em] uppercase text-bright-orange bg-black/50 backdrop-blur border border-bright-orange/30 px-3 py-1.5">
+                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-bright-orange bg-black/50 backdrop-blur border border-bright-orange/30 px-3 py-1.5">
                     Carbon Propulsion Plate
                   </div>
                   <div className="w-1.5 h-1.5 bg-bright-orange rounded-full animate-ping" />
@@ -245,7 +245,7 @@ export default function InnovationPage() {
       </section>
 
       {/* Technologies Section */}
-      <section id="technologies" className="py-40 relative">
+      <section id="technologies" className="py-40 relative bg-black">
         {/* Decorative running grid line */}
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-bright-orange/20 to-transparent hidden lg:block" />
 
@@ -262,7 +262,7 @@ export default function InnovationPage() {
                     transition={{ duration: 1 }}
                     className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-bright-orange/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
                   />
-                  <div className="absolute top-6 left-6 font-mono text-[10px] tracking-[0.3em] text-white/30 uppercase">Fig. 01</div>
+                  <div className="absolute top-6 left-6 font-mono text-sm tracking-[0.3em] text-white/30 uppercase">Fig. 01</div>
                   <Zap size={200} className="absolute -bottom-10 -right-10 text-neutral-800/30 group-hover:text-neutral-700 transition-colors duration-700 mix-blend-screen" strokeWidth={0.2} />
                   
                   <div className="relative z-10 h-full flex flex-col justify-center" style={{ transform: "translateZ(30px)" }}>
@@ -273,14 +273,14 @@ export default function InnovationPage() {
                         whileHover={{ scale: 1.05 }}
                         className="border-t border-neutral-800 pt-4"
                       >
-                        <p className="font-mono text-[9px] text-white/50 tracking-[0.2em] uppercase mb-2">Energy Return</p>
+                        <p className="font-mono text-xs text-white/50 tracking-[0.2em] uppercase mb-2">Energy Return</p>
                         <p className="font-bebas text-4xl text-white">340%</p>
                       </motion.div>
                       <motion.div 
                         whileHover={{ scale: 1.05 }}
                         className="border-t border-neutral-800 pt-4"
                       >
-                        <p className="font-mono text-[9px] text-white/50 tracking-[0.2em] uppercase mb-2">Thickness</p>
+                        <p className="font-mono text-xs text-white/50 tracking-[0.2em] uppercase mb-2">Thickness</p>
                         <p className="font-bebas text-4xl text-white">1.2mm</p>
                       </motion.div>
                     </div>
@@ -298,16 +298,16 @@ export default function InnovationPage() {
                 >
                   <Zap size={16} />
                 </motion.span>
-                <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/60">Core Technology</span>
+                <span className="font-mono text-sm tracking-[0.3em] uppercase text-white/60">Core Technology</span>
               </div>
               <StaggeredText 
                 text="Explosive Forward Momentum."
                 className="font-bebas text-6xl md:text-7xl tracking-tighter uppercase leading-none mb-8"
               />
-              <p className="text-white/60 font-montserrat text-sm leading-relaxed mb-10 text-justify">
+              <p className="text-white/60 font-montserrat text-lg leading-relaxed mb-10 text-justify">
                 A full-length, hyper-curved carbon fiber plate lies at the heart of our performance models. Cured in aerospace autoclaves, it stores kinetic energy upon impact and releases it with a violent, propulsive snap during toe-off.
               </p>
-              <ul className="space-y-6 font-mono text-[10px] tracking-[0.1em] text-white/70">
+              <ul className="space-y-6 font-mono text-base tracking-[0.1em] text-white/70">
                 {[
                   "Reduces ankle joint workload by up to 18%",
                   "Custom layup design for varying stiffness zones",
@@ -339,16 +339,16 @@ export default function InnovationPage() {
                 >
                   <Layers size={16} />
                 </motion.span>
-                <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-white/60">Midsole Innovation</span>
+                <span className="font-mono text-sm tracking-[0.3em] uppercase text-white/60">Midsole Innovation</span>
               </div>
               <StaggeredText 
                 text="Kinetic Foam Array."
                 className="font-bebas text-6xl md:text-7xl tracking-tighter uppercase leading-none mb-8"
               />
-              <p className="text-white/60 font-montserrat text-sm leading-relaxed mb-10 text-justify">
+              <p className="text-white/60 font-montserrat text-lg leading-relaxed mb-10 text-justify">
                 Traditional EVA foam is dead. Kinetic Foam is a nitrogen-infused, supercritical compound that delivers extreme cushioning while maintaining razor-sharp responsiveness. 
               </p>
-              <ul className="space-y-6 font-mono text-[10px] tracking-[0.1em] text-white/70">
+              <ul className="space-y-6 font-mono text-base tracking-[0.1em] text-white/70">
                 {[
                   "40% lighter than standard industry foams",
                   "Zero compression set after 500 miles",
@@ -377,7 +377,7 @@ export default function InnovationPage() {
                     transition={{ duration: 1 }}
                     className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-bright-orange/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" 
                   />
-                  <div className="absolute top-6 left-6 font-mono text-[10px] tracking-[0.3em] text-white/30 uppercase">Fig. 02</div>
+                  <div className="absolute top-6 left-6 font-mono text-sm tracking-[0.3em] text-white/30 uppercase">Fig. 02</div>
                   <Activity size={200} className="absolute -bottom-10 -left-10 text-neutral-800/30 group-hover:text-neutral-700 transition-colors duration-700 mix-blend-screen" strokeWidth={0.2} />
                   
                   <div className="relative z-10 h-full flex flex-col justify-center text-right items-end" style={{ transform: "translateZ(30px)" }}>
@@ -385,11 +385,11 @@ export default function InnovationPage() {
                     <h3 className="font-bebas text-5xl md:text-6xl tracking-wide uppercase text-bright-orange mb-10 drop-shadow-[0_0_15px_rgba(255,85,0,0.4)]">Nitrogen Foam</h3>
                     <div className="grid grid-cols-2 gap-8 mt-auto text-left w-full border-t border-neutral-800 pt-4">
                       <motion.div whileHover={{ scale: 1.05 }}>
-                        <p className="font-mono text-[9px] text-white/50 tracking-[0.2em] uppercase mb-2">Density</p>
+                        <p className="font-mono text-xs text-white/50 tracking-[0.2em] uppercase mb-2">Density</p>
                         <p className="font-bebas text-4xl text-white">0.11g/cm³</p>
                       </motion.div>
                       <motion.div whileHover={{ scale: 1.05 }}>
-                        <p className="font-mono text-[9px] text-white/50 tracking-[0.2em] uppercase mb-2">Impact Absorb</p>
+                        <p className="font-mono text-xs text-white/50 tracking-[0.2em] uppercase mb-2">Impact Absorb</p>
                         <p className="font-bebas text-4xl text-white">88%</p>
                       </motion.div>
                     </div>

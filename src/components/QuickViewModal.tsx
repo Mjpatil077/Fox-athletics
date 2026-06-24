@@ -100,38 +100,38 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
           <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-between overflow-y-auto max-h-[90vh] md:max-h-none">
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-montserrat uppercase tracking-widest text-neutral-400 flex items-center gap-1.5 select-none">
+                <span className="text-sm font-montserrat uppercase tracking-widest text-neutral-400 flex items-center gap-1.5 select-none">
                   <Fox3DLogo className="w-5 h-5" />
                   <span>{product.category} Footwear</span>
                 </span>
-                <h3 className="font-bebas text-3xl md:text-4xl tracking-wider text-white uppercase mt-1">
+                <h3 className="font-bebas text-4xl md:text-5xl tracking-wider text-white uppercase mt-1">
                   {product.name}
                 </h3>
                 <div className="flex items-center space-x-2 mt-2">
                   <div className="flex items-center text-neon-green">
                     <Star size={14} className="fill-neon-green" />
-                    <span className="text-xs font-mono font-bold ml-1">{product.rating}</span>
+                    <span className="text-sm font-mono font-bold ml-1">{product.rating}</span>
                   </div>
-                  <span className="text-xs text-neutral-500 font-montserrat">
+                  <span className="text-sm text-neutral-500 font-montserrat">
                     ({product.reviewsCount} reviews)
                   </span>
                 </div>
               </div>
 
               {/* Price */}
-              <div className="text-2xl font-bebas text-white tracking-widest">
+              <div className="text-3xl font-bebas text-white tracking-widest">
                 ${product.price}
               </div>
 
               {/* Description */}
-              <p className="text-xs text-neutral-400 font-montserrat leading-relaxed">
+              <p className="text-base text-neutral-400 font-montserrat leading-relaxed">
                 {product.description}
               </p>
 
               {/* Colors */}
               {product.colors.length > 0 && (
                 <div className="space-y-2">
-                  <span className="text-[10px] font-montserrat uppercase tracking-widest text-neutral-400">
+                  <span className="text-xs font-montserrat uppercase tracking-widest text-neutral-400">
                     SELECT COLOR: {selectedColor?.name}
                   </span>
                   <div className="flex items-center space-x-3">
@@ -158,7 +158,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
               {/* Sizes */}
               {product.sizes.length > 0 && (
                 <div className="space-y-2">
-                  <span className="text-[10px] font-montserrat uppercase tracking-widest text-neutral-400">
+                  <span className="text-xs font-montserrat uppercase tracking-widest text-neutral-400">
                     SELECT SIZE
                   </span>
                   <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
@@ -166,7 +166,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
                       <button
                         key={s}
                         onClick={() => setSelectedSize(s)}
-                        className={`py-2 text-xs font-mono border text-center transition-all cursor-pointer ${
+                        className={`py-2 text-sm font-mono border text-center transition-all cursor-pointer ${
                           selectedSize === s
                             ? "bg-white text-black border-white"
                             : "border-neutral-800 text-neutral-400 hover:border-neutral-500 hover:text-white"
@@ -184,7 +184,7 @@ export default function QuickViewModal({ product, onClose }: QuickViewModalProps
             <div className="flex items-center space-x-4 mt-8 pt-6 border-t border-neutral-900">
               <button
                 onClick={handleAddToCart}
-                className="flex-1 bg-white hover:bg-neon-green text-black font-bebas py-3.5 tracking-widest flex items-center justify-center space-x-2 transition-all cursor-pointer"
+                className="flex-1 bg-white hover:bg-neon-green text-black font-bebas text-xl py-3.5 tracking-widest flex items-center justify-center space-x-2 transition-all cursor-pointer"
               >
                 <ShoppingBag size={18} />
                 <span>ADD TO BAG</span>

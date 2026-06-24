@@ -119,7 +119,7 @@ export default function BrandPage() {
               initial={{ opacity: 0, letterSpacing: "0em" }}
               animate={{ opacity: 1, letterSpacing: "0.4em" }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="font-mono text-[10px] text-bright-orange uppercase mb-6"
+              className="font-mono text-xl md:text-2xl text-bright-orange uppercase mb-6"
             >
               The Fox Identity
             </motion.p>
@@ -164,7 +164,7 @@ export default function BrandPage() {
           className="whitespace-nowrap flex"
         >
           {[...Array(10)].map((_, i) => (
-             <span key={i} className="font-mono text-[10px] tracking-[0.3em] text-black uppercase px-8">
+             <span key={i} className="font-mono text-lg tracking-[0.3em] text-black uppercase px-8">
                Data Driven Performance <span className="mx-6">✦</span> Absolute Energy Return <span className="mx-6">✦</span> Synthetic Evolution
              </span>
           ))}
@@ -180,7 +180,7 @@ export default function BrandPage() {
                 text="The Anatomy of Domination" 
                 className="font-bebas text-6xl md:text-8xl tracking-tighter uppercase text-neutral-900 leading-none mb-10" 
               />
-              <RevealSection delay={0.4} className="space-y-6 text-neutral-500 font-montserrat text-sm leading-relaxed relative">
+              <RevealSection delay={0.4} className="space-y-6 text-neutral-500 font-montserrat text-lg leading-relaxed relative">
                 <div className="absolute -left-6 top-0 bottom-0 w-px bg-neutral-200" />
                 <p>
                   We don't do heritage. We don't do hand-stitched nostalgia. FOX is born from raw data, biomechanical engineering, and an obsessive pursuit of marginal gains. 
@@ -208,7 +208,7 @@ export default function BrandPage() {
                 />
               </motion.div>
               <div className="absolute bottom-0 left-0 right-0 p-6 z-20 bg-gradient-to-t from-black/20 to-transparent">
-                <div className="font-mono text-[9px] tracking-[0.25em] text-white bg-black/80 backdrop-blur-md px-4 py-2 uppercase inline-block">
+                <div className="font-mono text-[11px] tracking-[0.25em] text-white bg-black/80 backdrop-blur-md px-4 py-2 uppercase inline-block">
                   Subject: Alpha-01 Carbon Plate
                 </div>
               </div>
@@ -255,7 +255,7 @@ export default function BrandPage() {
                 <h3 className="font-bebas text-4xl tracking-wide text-neutral-900 group-hover:text-white transition-colors duration-500 mb-4">
                   {pillar.title}
                 </h3>
-                <p className="text-neutral-500 font-montserrat text-sm leading-relaxed group-hover:text-white/60 transition-colors duration-500">
+                <p className="text-neutral-500 font-montserrat text-lg leading-relaxed group-hover:text-white/60 transition-colors duration-500">
                   {pillar.desc}
                 </p>
               </RevealSection>
@@ -272,7 +272,7 @@ export default function BrandPage() {
             <h2 className="font-bebas text-7xl md:text-[9rem] tracking-tighter uppercase leading-none">
               The <span className="text-bright-orange">Roster.</span>
             </h2>
-            <p className="text-white/50 font-montserrat text-sm max-w-xl mt-8">
+            <p className="text-white/50 font-montserrat text-lg max-w-xl mt-8">
               We don't sponsor. We arm the elite. The athletes who demand more from their gear than anyone else on the planet.
             </p>
           </RevealSection>
@@ -305,7 +305,7 @@ export default function BrandPage() {
                     initial={{ y: 20, opacity: 0 }}
                     animate={hoveredAthlete === i ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="font-mono text-[9px] tracking-[0.2em] text-bright-orange uppercase mb-2"
+                    className="font-mono text-[11px] tracking-[0.2em] text-bright-orange uppercase mb-2"
                   >
                     {athlete.sport}
                   </motion.div>

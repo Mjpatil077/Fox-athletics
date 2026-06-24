@@ -203,7 +203,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="font-mono text-[10px] tracking-[0.4em] text-white/40 uppercase mb-4"
+            className="font-mono text-sm tracking-[0.4em] text-white/40 uppercase mb-4"
           >
             SS26 — Performance Redefined
           </motion.p>
@@ -234,7 +234,7 @@ export default function Home() {
             </button>
             <button
               onClick={() => document.getElementById("tech")?.scrollIntoView({ behavior: "smooth" })}
-              className="border border-white/30 text-white font-mono text-xs tracking-[0.2em] uppercase px-8 py-4 hover:border-white transition-colors duration-300 cursor-pointer"
+              className="border border-white/30 text-white font-mono text-sm tracking-[0.2em] uppercase px-8 py-4 hover:border-white transition-colors duration-300 cursor-pointer"
             >
               Our Technology
             </button>
@@ -287,7 +287,7 @@ export default function Home() {
                 <p className="font-bebas text-5xl md:text-6xl text-neutral-900 leading-none">
                   {stat.value}
                 </p>
-                <p className="font-mono text-[10px] tracking-[0.25em] text-neutral-400 uppercase mt-2">
+                <p className="font-mono text-sm tracking-[0.25em] text-neutral-400 uppercase mt-2">
                   {stat.label}
                 </p>
               </RevealSection>
@@ -305,7 +305,7 @@ export default function Home() {
               <br />
               <span className="text-bright-orange">Differently.</span>
             </h2>
-            <p className="text-neutral-500 font-montserrat text-sm leading-relaxed mt-6 max-w-lg">
+            <p className="text-neutral-500 font-montserrat text-lg leading-relaxed mt-6 max-w-lg">
               Every component of Fox footwear is designed with a singular obsession — to make you faster, stronger, and more explosive than ever before.
             </p>
           </RevealSection>
@@ -318,14 +318,14 @@ export default function Home() {
                   <p className="font-bebas text-4xl text-neutral-900 group-hover:text-white transition-colors duration-500">
                     {spec.stat}
                   </p>
-                  <p className="font-mono text-[9px] tracking-[0.25em] text-neutral-400 uppercase">
+                  <p className="font-mono text-xs tracking-[0.25em] text-neutral-400 uppercase">
                     {spec.statLabel}
                   </p>
                 </div>
                 <h3 className="font-bebas text-2xl tracking-wide text-neutral-900 group-hover:text-white transition-colors duration-500 mb-2">
                   {spec.title}
                 </h3>
-                <p className="text-neutral-500 font-montserrat text-xs leading-relaxed group-hover:text-white/60 transition-colors duration-500">
+                <p className="text-neutral-500 font-montserrat text-base leading-relaxed group-hover:text-white/60 transition-colors duration-500">
                   {spec.desc}
                 </p>
               </RevealSection>
@@ -344,12 +344,12 @@ export default function Home() {
                 Autoclave<br />
                 <span className="text-bright-orange">Carbon 001</span>
               </h2>
-              <p className="text-white/60 font-montserrat text-sm leading-relaxed mb-8 max-w-md">
+              <p className="text-white/60 font-montserrat text-lg leading-relaxed mb-8 max-w-md">
                 Built with direct autoclave raw carbon fiber panels, individually serialized laser engravings, and a custom neon-orange glow outsole. The most exclusive Fox drop ever made.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
                 {["Serialized Edition", "Carbon Fiber", "Glow Outsole"].map((tag) => (
-                  <span key={tag} className="border border-white/20 text-white/60 font-mono text-[9px] tracking-[0.2em] uppercase px-3 py-1.5">
+                  <span key={tag} className="border border-white/20 text-white/60 font-mono text-xs tracking-[0.2em] uppercase px-3 py-1.5">
                     {tag}
                   </span>
                 ))}
@@ -361,9 +361,9 @@ export default function Home() {
                 >
                   <Flame size={16} /> Secure Yours
                 </button>
-                <div className="text-white/40 font-mono text-xs">
+                <div className="text-white/40 font-mono text-sm">
                   <p className="text-2xl font-bebas text-white tracking-widest text-bright-orange">LIMITED</p>
-                  <p className="text-[9px] tracking-[0.2em] uppercase">Only 7 remaining</p>
+                  <p className="text-sm tracking-[0.2em] uppercase">Only 7 remaining</p>
                 </div>
               </div>
             </RevealSection>
@@ -410,7 +410,7 @@ export default function Home() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`font-mono text-[10px] tracking-[0.2em] uppercase px-4 py-2 border transition-all duration-200 ${
+                  className={`font-mono text-sm tracking-[0.2em] uppercase px-4 py-2 border transition-all duration-200 ${
                     selectedCategory === cat
                       ? "bg-black text-white border-black"
                       : "border-neutral-200 text-neutral-500 hover:border-neutral-900 hover:text-neutral-900"
@@ -474,7 +474,7 @@ export default function Home() {
               <br />
               <span className="text-bright-orange">Obsession.</span>
             </h2>
-            <p className="text-white/60 font-montserrat text-sm leading-relaxed mb-8">
+            <p className="text-white/60 font-montserrat text-lg leading-relaxed mb-8">
               Fox Athletics isn't just footwear — it's an identity. Every stitch, every material, every sole is a statement about what you're capable of achieving.
             </p>
             <motion.button
@@ -515,7 +515,7 @@ export default function Home() {
                     <Star key={j} size={12} className="fill-neutral-900 text-neutral-900" />
                   ))}
                 </div>
-                <p className="font-montserrat text-sm text-neutral-600 leading-relaxed italic flex-1">
+                <p className="font-montserrat text-lg text-neutral-600 leading-relaxed italic flex-1">
                   "{review.text}"
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-neutral-100">
@@ -523,10 +523,10 @@ export default function Home() {
                     {review.name[0]}
                   </div>
                   <div>
-                    <p className="font-bebas text-sm tracking-wide text-neutral-900 leading-none">
+                    <p className="font-bebas text-base tracking-wide text-neutral-900 leading-none">
                       {review.name}
                     </p>
-                    <p className="font-mono text-[9px] tracking-[0.2em] text-neutral-400 uppercase">
+                    <p className="font-mono text-[11px] tracking-[0.2em] text-neutral-400 uppercase">
                       {review.role}
                     </p>
                   </div>
@@ -547,7 +547,7 @@ export default function Home() {
             <h2 className="font-bebas text-5xl md:text-7xl tracking-tighter uppercase text-neutral-900 leading-none">
               The Collective.
             </h2>
-            <p className="text-neutral-500 font-montserrat text-sm leading-relaxed mt-4">
+            <p className="text-neutral-500 font-montserrat text-lg leading-relaxed mt-4">
               Join thousands of athletes who have chosen to push beyond average.
             </p>
           </RevealSection>
@@ -573,8 +573,8 @@ export default function Home() {
               <RevealSection key={i} delay={i * 0.1} className="bg-white border border-neutral-100 p-8 group hover:border-neutral-900 transition-colors duration-300">
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="font-bebas text-2xl text-neutral-900 mb-2">{item.title}</h3>
-                <p className="text-neutral-500 font-montserrat text-sm leading-relaxed">{item.desc}</p>
-                <div className="mt-6 flex items-center gap-2 font-mono text-[10px] tracking-[0.2em] uppercase text-neutral-400 group-hover:text-bright-orange transition-colors duration-300">
+                <p className="text-neutral-500 font-montserrat text-lg leading-relaxed">{item.desc}</p>
+                <div className="mt-6 flex items-center gap-2 font-mono text-xs tracking-[0.2em] uppercase text-neutral-400 group-hover:text-bright-orange transition-colors duration-300">
                   Learn More <ArrowRight size={12} />
                 </div>
               </RevealSection>
@@ -592,7 +592,7 @@ export default function Home() {
               The Future of <br />
               <span className="text-bright-orange stroke-text">Movement</span>
             </h2>
-            <p className="text-white/50 font-montserrat text-sm max-w-xl mx-auto mb-10">
+            <p className="text-white/50 font-montserrat text-lg max-w-xl mx-auto mb-10">
               Join the revolution. The first drop is extremely limited. Be ready.
             </p>
             <motion.button
@@ -614,9 +614,9 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <Fox3DLogo className="w-10 h-10" />
-                <span className="font-bebas text-xl tracking-[0.2em] text-white">Fox Athletics</span>
+                <span className="font-bebas text-3xl tracking-[0.2em] text-white">Fox Athletics</span>
               </div>
-              <p className="font-montserrat text-xs text-white/30 max-w-xs leading-relaxed">
+              <p className="font-montserrat text-base text-white/40 max-w-sm leading-relaxed">
                 Premium performance footwear and apparel engineered for the obsessed athlete.
               </p>
             </div>
@@ -638,7 +638,7 @@ export default function Home() {
                 },
               ].map((col) => (
                 <div key={col.heading}>
-                  <p className="font-mono text-[9px] tracking-[0.3em] text-white/30 uppercase mb-4">
+                  <p className="font-mono text-xs tracking-[0.3em] text-white/40 uppercase mb-4">
                     {col.heading}
                   </p>
                   <ul className="space-y-2">
@@ -646,7 +646,7 @@ export default function Home() {
                       <li key={link}>
                         <a
                           href="#"
-                          className="font-montserrat text-xs text-white/50 hover:text-white transition-colors duration-200"
+                          className="font-montserrat text-base text-white/60 hover:text-white transition-colors duration-200"
                         >
                           {link}
                         </a>
@@ -659,7 +659,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/5">
-            <p className="font-mono text-[9px] tracking-[0.2em] text-white/20 uppercase">
+            <p className="font-mono text-sm tracking-[0.2em] text-white/30 uppercase">
               © 2026 Fox Athletics. All rights reserved.
             </p>
             <div className="flex gap-6">
@@ -667,7 +667,7 @@ export default function Home() {
                 <a
                   key={item}
                   href="#"
-                  className="font-mono text-[9px] tracking-[0.2em] text-white/20 hover:text-white/50 uppercase transition-colors duration-200"
+                  className="font-mono text-sm tracking-[0.2em] text-white/30 hover:text-white/70 uppercase transition-colors duration-200"
                 >
                   {item}
                 </a>

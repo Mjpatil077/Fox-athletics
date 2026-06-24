@@ -56,12 +56,12 @@ export default function CartDrawer() {
                   <h3 className="font-bebas text-3xl tracking-widest text-neutral-500">
                     YOUR BAG IS EMPTY.
                   </h3>
-                  <p className="text-neutral-400 text-sm max-w-xs font-montserrat">
+                  <p className="text-neutral-400 text-base max-w-xs font-montserrat">
                     Break limits. Fuel your training with the latest high-performance gear.
                   </p>
                   <button
                     onClick={() => setIsCartOpen(false)}
-                    className="bg-white text-black font-bebas px-6 py-3 tracking-widest text-sm hover:bg-neon-green hover:text-black transition-all cursor-pointer"
+                    className="bg-white text-black font-bebas px-6 py-3 tracking-widest text-base hover:bg-neon-green hover:text-black transition-all cursor-pointer"
                   >
                     START SHOPPING
                   </button>
@@ -92,7 +92,7 @@ export default function CartDrawer() {
                             ${item.product.price * item.quantity}
                           </span>
                         </div>
-                        <p className="text-xs text-neutral-400 font-montserrat uppercase tracking-wider mt-0.5">
+                        <p className="text-sm text-neutral-400 font-montserrat uppercase tracking-wider mt-0.5">
                           Size: {item.selectedSize} | Color: {item.selectedColor.name}
                         </p>
                       </div>
@@ -157,14 +157,14 @@ export default function CartDrawer() {
             {cart.length > 0 && (
               <div className="p-6 bg-neutral-950 border-t border-neutral-900 space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-neutral-400 font-montserrat text-sm tracking-wider uppercase">
+                  <span className="text-neutral-400 font-montserrat text-base tracking-wider uppercase">
                     Subtotal
                   </span>
                   <span className="font-bebas text-2xl text-white tracking-wider">
                     ${subtotal}
                   </span>
                 </div>
-                <p className="text-neutral-500 text-[10px] uppercase font-montserrat tracking-widest">
+                <p className="text-neutral-500 text-xs uppercase font-montserrat tracking-widest">
                   Shipping and taxes calculated at checkout.
                 </p>
                 <button

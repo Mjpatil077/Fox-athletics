@@ -43,12 +43,12 @@ export default function ProductCard({
           }}
         >
           {product.isLimited && (
-            <div className="absolute top-3 left-3 z-10 bg-black text-white font-mono text-[9px] tracking-[0.2em] px-2 py-1 uppercase">
+            <div className="absolute top-3 left-3 z-10 bg-black text-white font-mono text-xs tracking-[0.2em] px-2 py-1 uppercase">
               Limited
             </div>
           )}
           {product.stockLeft && (
-            <div className="absolute top-3 right-3 z-10 bg-bright-orange text-white font-mono text-[9px] tracking-[0.15em] px-2 py-1 uppercase">
+            <div className="absolute top-3 right-3 z-10 bg-bright-orange text-white font-mono text-xs tracking-[0.15em] px-2 py-1 uppercase">
               {product.stockLeft} left
             </div>
           )}
@@ -61,7 +61,7 @@ export default function ProductCard({
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100">
             <button
               onClick={() => setQuickViewProduct(product)}
-              className="bg-black text-white font-mono text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 flex items-center gap-2 hover:bg-bright-orange transition-colors duration-200 cursor-pointer"
+              className="bg-black text-white font-mono text-sm tracking-[0.2em] uppercase px-5 py-2.5 flex items-center gap-2 hover:bg-bright-orange transition-colors duration-200 cursor-pointer"
             >
               <Eye size={12} /> Quick View
             </button>
@@ -83,10 +83,10 @@ export default function ProductCard({
         <div className="p-4 flex flex-col gap-2 flex-1">
           <div className="flex items-start justify-between">
             <div>
-              <p className="font-mono text-[9px] text-neutral-400 tracking-[0.25em] uppercase mb-1">
+              <p className="font-mono text-xs text-neutral-400 tracking-[0.25em] uppercase mb-1">
                 {product.category}
               </p>
-              <h3 className="font-bebas text-lg leading-none tracking-wide text-neutral-900">
+              <h3 className="font-bebas text-2xl leading-none tracking-wide text-neutral-900">
                 {product.name}
               </h3>
             </div>
@@ -106,7 +106,7 @@ export default function ProductCard({
                 className={i < Math.floor(product.rating) ? "fill-neutral-900 text-neutral-900" : "text-neutral-200"}
               />
             ))}
-            <span className="font-mono text-[9px] text-neutral-400 ml-1">
+            <span className="font-mono text-xs text-neutral-400 ml-1">
               ({product.reviewsCount})
             </span>
           </div>
@@ -119,7 +119,7 @@ export default function ProductCard({
                 onMouseEnter={() => setHoveredSize(size)}
                 onMouseLeave={() => setHoveredSize(null)}
                 onClick={() => addToCart(product, size)}
-                className={`font-mono text-[9px] px-2 py-1 border transition-colors duration-150 ${
+                className={`font-mono text-xs px-2 py-1 border transition-colors duration-150 ${
                   hoveredSize === size
                     ? "bg-black text-white border-black"
                     : "border-neutral-200 text-neutral-500 hover:border-neutral-900"
@@ -133,7 +133,7 @@ export default function ProductCard({
           {/* Add to Cart */}
           <button
             onClick={() => addToCart(product, product.sizes[0])}
-            className="mt-2 w-full bg-neutral-900 text-white font-bebas tracking-[0.2em] text-sm py-3 hover:bg-bright-orange transition-colors duration-300 flex items-center justify-center gap-2 cursor-pointer"
+            className="mt-2 w-full bg-neutral-900 text-white font-bebas tracking-[0.2em] text-lg py-3 hover:bg-bright-orange transition-colors duration-300 flex items-center justify-center gap-2 cursor-pointer"
           >
             <ShoppingBag size={14} /> Add to Cart
           </button>

@@ -29,7 +29,7 @@ export default function CartPage() {
               Your <br />
               <span className="text-bright-orange">Bag.</span>
             </h1>
-            <p className="mt-4 font-mono text-[10px] tracking-[0.2em] text-neutral-400 uppercase">
+            <p className="mt-4 font-mono text-xs tracking-[0.2em] text-neutral-400 uppercase">
               {cart.reduce((sum, item) => sum + item.quantity, 0)} Items
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function CartPage() {
                         <div className="flex-1 flex flex-col">
                           <div className="flex justify-between items-start mb-2">
                             <div>
-                              <p className="font-mono text-[10px] text-neutral-400 tracking-[0.2em] uppercase mb-1">
+                              <p className="font-mono text-[11px] text-neutral-400 tracking-[0.2em] uppercase mb-1">
                                 {item.product.category}
                               </p>
                               <h3 className="font-bebas text-2xl tracking-wide text-neutral-900">
@@ -111,7 +111,7 @@ export default function CartPage() {
 
                             <button
                               onClick={() => removeFromCart(item.product.id, item.selectedSize, item.selectedColor.name)}
-                              className="text-neutral-400 hover:text-red-500 flex items-center gap-2 font-mono text-xs uppercase tracking-widest transition-colors"
+                              className="text-neutral-400 hover:text-red-500 flex items-center gap-2 font-mono text-sm uppercase tracking-widest transition-colors"
                             >
                               <Trash2 size={14} /> Remove
                             </button>
@@ -133,7 +133,7 @@ export default function CartPage() {
                     <h2 className="font-bebas text-3xl tracking-wide text-neutral-900 mb-4">
                       Your Bag is Empty
                     </h2>
-                    <p className="font-montserrat text-sm text-neutral-500 max-w-md mx-auto mb-8">
+                    <p className="font-montserrat text-base text-neutral-500 max-w-md mx-auto mb-8">
                       Break limits. Fuel your training with the latest high-performance gear.
                     </p>
                     <Link
@@ -154,16 +154,16 @@ export default function CartPage() {
                   <h3 className="font-bebas text-2xl tracking-widest text-neutral-900 mb-6">Order Summary</h3>
                   
                   <div className="space-y-4 mb-8">
-                    <div className="flex justify-between font-mono text-sm tracking-wider">
-                      <span className="text-neutral-500">Subtotal</span>
-                      <span className="text-neutral-900">${subtotal}</span>
+                    <div className="flex justify-between font-montserrat text-sm tracking-wide py-2">
+                      <span className="text-neutral-500 font-medium">Subtotal</span>
+                      <span className="text-neutral-900 font-semibold">${subtotal}</span>
                     </div>
-                    <div className="flex justify-between font-mono text-sm tracking-wider">
-                      <span className="text-neutral-500">Shipping</span>
+                    <div className="flex justify-between font-montserrat text-sm tracking-wide py-2">
+                      <span className="text-neutral-500 font-medium">Shipping</span>
                       <span className="text-neutral-900">Calculated at checkout</span>
                     </div>
-                    <div className="flex justify-between font-mono text-sm tracking-wider">
-                      <span className="text-neutral-500">Taxes</span>
+                    <div className="flex justify-between font-montserrat text-sm tracking-wide py-2">
+                      <span className="text-neutral-500 font-medium">Taxes</span>
                       <span className="text-neutral-900">Calculated at checkout</span>
                     </div>
                   </div>
@@ -182,9 +182,9 @@ export default function CartPage() {
                   </button>
                   
                   <div className="mt-6 flex items-center justify-center gap-4 text-neutral-300">
-                    <span className="font-mono text-[9px] uppercase tracking-[0.2em]">Secure Encryption</span>
+                    <span className="font-mono text-[11px] uppercase tracking-[0.2em]">Secure Encryption</span>
                     <span className="w-1 h-1 bg-neutral-300 rounded-full" />
-                    <span className="font-mono text-[9px] uppercase tracking-[0.2em]">Free Returns</span>
+                    <span className="font-mono text-[11px] uppercase tracking-[0.2em]">Free Returns</span>
                   </div>
                 </div>
               </div>

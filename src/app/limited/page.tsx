@@ -144,13 +144,13 @@ export default function LimitedPage() {
                   <Lock size={28} className="text-bright-orange" />
                 </motion.div>
                 
-                <p className="font-mono text-[10px] tracking-[0.4em] text-white/50 uppercase mb-4">
+                <p className="font-mono text-lg tracking-[0.4em] text-white/50 uppercase mb-4">
                   Classified Drop / Subject 001
                 </p>
                 
                 <GlitchText text="RESTRICTED ACCESS" className="font-bebas text-5xl md:text-7xl tracking-tighter uppercase mb-10" />
                 
-                <p className="font-montserrat text-xs text-white/40 mb-10 max-w-sm mx-auto leading-relaxed">
+                <p className="font-montserrat text-lg text-white/40 mb-10 max-w-sm mx-auto leading-relaxed">
                   Only 100 serialized pairs of the Carbon Volt exist. Level 4 clearance is required to view full specifications and secure your pair.
                 </p>
 
@@ -162,7 +162,7 @@ export default function LimitedPage() {
                     setTimeout(() => setIsUnlocked(true), 3500);
                   }}
                   disabled={isRequesting}
-                  className="group relative px-12 py-5 font-mono text-xs tracking-[0.3em] uppercase overflow-hidden border border-bright-orange bg-black text-bright-orange w-full sm:w-auto cursor-pointer disabled:opacity-70 disabled:cursor-wait"
+                  className="group relative px-12 py-5 font-mono text-sm tracking-[0.3em] uppercase overflow-hidden border border-bright-orange bg-black text-bright-orange w-full sm:w-auto cursor-pointer disabled:opacity-70 disabled:cursor-wait"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-3">
                     <Unlock size={14} className="group-hover:text-black transition-colors duration-300" /> 
@@ -184,7 +184,7 @@ export default function LimitedPage() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <Flame className="text-bright-orange" size={24} />
-                  <span className="font-mono text-[10px] tracking-[0.4em] text-white/50 uppercase border-b border-bright-orange/30 pb-1">Carbon Volt Protocol</span>
+                  <span className="font-mono text-xs tracking-[0.4em] text-white/50 uppercase border-b border-bright-orange/30 pb-1">Carbon Volt Protocol</span>
                 </div>
                 
                 <div className="flex gap-4 mb-8 font-bebas text-5xl md:text-6xl tracking-wider text-bright-orange">
@@ -212,7 +212,7 @@ export default function LimitedPage() {
                   Autoclave Carbon <span className="text-bright-orange">001</span>
                 </h2>
                 
-                <p className="text-white/50 font-montserrat text-xs leading-relaxed mb-8 max-w-sm mx-auto">
+                <p className="text-white/50 font-montserrat text-lg leading-relaxed mb-8 max-w-sm mx-auto">
                   Direct autoclave raw carbon fiber panels. Individually serialized. Only 7 pairs remain available in the vault.
                 </p>
 
