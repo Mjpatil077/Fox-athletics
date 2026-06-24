@@ -67,20 +67,13 @@ body {
 
 /* ──── Scrollbar ──── */
 ::-webkit-scrollbar {
-  width: 6px;
+  display: none;
+  width: 0;
 }
 
-::-webkit-scrollbar-track {
-  background: #f0f0f0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #d4d4d4;
-  border-radius: 99px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #ccff00;
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* ──── Film Grain Overlay ──── */
